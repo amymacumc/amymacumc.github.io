@@ -1,0 +1,31 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Jeff's awesome website
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+Here's some text.
+[google](https://www.google.com/) all the time to do the data science.
+
+```{r}
+#![](images/ted.jpg)
+library(tidyverse)
+
+sample= rnorm(1000)
+mean(sample)
+
+
+```
+
+
+Here is the link to the about page:
+[about](about.html)
+
+I also made an extra bonus [extra page](extra_page.html)
+
