@@ -6,9 +6,11 @@ output:
     toc_float: true
 ---
 
-# This is Jeff's awesome website
+# This is Amy's awesome website
 
+<center>
 ![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+</center>
 
 Here's some text.
 [google](https://www.google.com/) all the time to do the data science.
