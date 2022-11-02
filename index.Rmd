@@ -13,8 +13,10 @@ output:
 Hi! This is **Jiong(Amy) Ma's** amazing website. By exploring it you can get a brief knowledge of me, and It is such a pleasure to have you here. :)
 
 <center>
-![](images/AmyMaphoto.jpg)
+<img src="images/AmyMaPhoto.jpg" style="width:50%">
 </center>
+
+
 
 ## Brief Introduction
 
