@@ -1,0 +1,52 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Number of items ordered in every aisle by bar chart
+
+```{r}
+data('instacart')
+
+instacart %>% group_by(aisle) %>% 
+  summarize(n = n()) %>% 
+  filter(n > 10000) %>% 
+  arrange(desc(n)) %>% 
+  mutate(aisle = fct_reorder(aisle, n)) %>%
+  plot_ly(
+    y = ~aisle, x = ~n, color = ~aisle,
+    type = 'bar', colors = 'viridis'
+  )
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Number of items ordered in every department by boxplot
+
+```{r}
+
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
