@@ -14,14 +14,14 @@ library(plotly)
 
 ```
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Number of items ordered in every aisle by bar chart
 
 ```{r}
 data('instacart')
-instacart <- instacart[1:10000,]
+instacart <- instacart[1:5000,]
   
 instacart %>% group_by(aisle) %>% 
   summarize(n = n()) %>% 
@@ -34,25 +34,32 @@ instacart %>% group_by(aisle) %>%
 
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Days since the prior order distribution of products by boxplot
+### Add-to-cart order distribution of packed products by boxplot
 
 ```{r}
 instacart %>% 
-  filter(aisle == c('baking ingredients')) %>% 
+  filter(aisle == c('milk')) %>% 
   mutate(product_id = as.character(product_id)) %>% 
   plot_ly(
-    x= ~product_id, y = ~days_since_prior_order, color = ~product_id,
+    x= ~product_id, y = ~add_to_cart_order, color = ~product_id,
     type = 'box', colors = 'viridis'
   )
 
 ```
 
-### Chart C
+### Number of items ordered in every department by scatterplot
 
 ```{r}
-
+instacart %>% 
+  group_by(department_id) %>% 
+  summarize(n = n()) %>% 
+  arrange(desc(n)) %>%
+  mutate(text_label = str_c("Department: ", department_id)) %>% 
+  plot_ly(
+    x = ~department_id, y = ~n, type = "scatter", mode = "markers",
+    color = ~department_id, text = ~text_label, alpha = 0.5)
 ```
 
