@@ -16,8 +16,6 @@ Hi! This is **Jiong(Amy) Ma's** amazing website. By exploring it you can get a b
 <img src="images/AmyMaPhoto.jpg" style="width:50%">
 </center>
 
-
-
 ## Brief Introduction
 
 I come from China, and I am now pursuing my graduate study in Columbia University. I used to study biological science, but I am a **biostatistics student** now. My career goal is to be a data scientist or biostatistician in the pharmaceutical industry, and dedicated to addressing real-word public health problems.
