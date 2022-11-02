@@ -21,10 +21,10 @@ Column {data-width=650}
 
 ```{r}
 data('instacart')
-
+instacart <- instacart[1:10000,]
+  
 instacart %>% group_by(aisle) %>% 
   summarize(n = n()) %>% 
-  filter(n > 10000) %>% 
   arrange(desc(n)) %>% 
   mutate(aisle = fct_reorder(aisle, n)) %>%
   plot_ly(
@@ -37,10 +37,16 @@ instacart %>% group_by(aisle) %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Number of items ordered in every department by boxplot
+### Days since the prior order distribution of products by boxplot
 
 ```{r}
-
+instacart %>% 
+  filter(aisle == c('baking ingredients')) %>% 
+  mutate(product_id = as.character(product_id)) %>% 
+  plot_ly(
+    x= ~product_id, y = ~days_since_prior_order, color = ~product_id,
+    type = 'box', colors = 'viridis'
+  )
 
 ```
 

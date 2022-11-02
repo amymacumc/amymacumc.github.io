@@ -25,5 +25,6 @@ I am also actively seeking 2023' Summer internships as **data scientist/biostati
 
 Here are the links to my [resume](cv.html) and [LinkedIn](https://cn.linkedin.com/in/jiong-m-6818b8218?trk=people-guest_people_search-card).
 
+Here is a [flexdashboard](flexdashboard.html) to demonstrate my ability of data analysis.
 
 

@@ -3,6 +3,8 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "flexdashboard"
+      href: flexdashboard.html
     - text: "CV"
       href: cv.html
     - icon: fa-regular fa-envelope
